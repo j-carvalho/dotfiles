@@ -15,7 +15,6 @@ My personal config files.
 # Installation
 
   * git clone git://github.com/j-carvalho/dotfiles ~/.dotfiles
-  
   * ln -s .dotfiles/vimrc ~/.vimrc
   * ln -s .dotfiles/vim ~/vim
   * ln -s .dotfiles/gitconfig ~/.gitconfig
