@@ -1,1 +1,2 @@
 alias lsp="ls -lp"
+alias vim="mvim -v"
