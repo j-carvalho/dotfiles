@@ -1,36 +1,26 @@
 set nocompatible              " be iMproved, required
 filetype off
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'flazz/vim-colorschemes'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'airblade/vim-gitgutter'
+" language support
+Bundle 'moll/vim-node'
+Bundle 'pangloss/vim-javascript'
+Bundle 'groenewege/vim-less'
 
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 set laststatus=2
-set guifont=Inconsolata\ for\ Powerline:h14
-let g:Powerline_symbols = 'fancy'
+set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
@@ -38,5 +28,60 @@ set term=xterm-256color
 set termencoding=utf-8
 set lazyredraw
 set ttyfast
+set ttymouse=xterm2
+set ttyscroll=3
+set nocursorline
+set nocursorcolumn
+set t_ut=
+set noswapfile
+set nobackup
+set nowritebackup
+
 syntax on
 colorscheme Tomorrow-Night
+set ruler background=dark
+set statusline=%<\ %n:%f\ %m%r%y%=%-30.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" Softtabs, 2 spaces
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set laststatus=2
+
+set list listchars=tab:»·,trail:·
+set ruler         " show the cursor position all the time
+set showcmd       " display incomplete commands
+set scrolloff=3
+set autoindent
+
+" Numbers
+set number
+
+" Words
+set gdefault
+set shiftround
+set nowrap
+
+" Search
+set incsearch hlsearch ignorecase smartcase
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
+
+" Ctrlp
+let g:ctrlp_show_hidden = 1

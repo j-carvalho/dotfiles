@@ -1,19 +1,24 @@
 export ZSH=$HOME/.oh-my-zsh
 
-#ZSH_THEME="af-magic"
-#ZSH_THEME="gozilla"
-ZSH_THEME="juanghurtado"
+ZSH_THEME="josecarvalho"
 
 DISABLE_AUTO_UPDATE="true"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git sublime syntax-highlighting brew bower nvm go golang heroku)
+plugins=(docker boot2docker git sublime syntax-highlighting brew bower nvm go heroku colored-man colorize vundle gitignore redis-cli sbt svn node npm osx vagrant docker tmux weechat)
 
 source $ZSH/oh-my-zsh.sh
 
+# fix osx
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Custom ZSH configs
-source $HOME/.dotfiles/zsh/aliases
+source $HOME/.zsh/aliases
+
+# TMUX
+export TERM="xterm-256color"
 
 # GOLANG CONFIG
 export GOPATH="$HOME/projects/gocode"
@@ -21,5 +26,4 @@ export GOPATH="$HOME/projects/gocode"
 # User configuration
 export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$GOPATH/bin:$PATH"
 
-[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
-[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm" # This loads rvm
+source $HOME/.zsh/os
