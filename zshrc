@@ -6,8 +6,7 @@ DISABLE_AUTO_UPDATE="true"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(docker boot2docker git sublime syntax-highlighting brew bower nvm go heroku colored-man colorize vundle gitignore redis-cli sbt svn node npm osx vagrant docker tmux weechat)
-
+plugins=(docker boot2docker git sublime syntax-highlighting brew bower nvm go heroku colored-man colorize vundle gitignore redis-cli sbt svn node npm osx vagrant docker tmux weechat) 
 source $ZSH/oh-my-zsh.sh
 
 # fix osx
