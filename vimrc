@@ -40,6 +40,7 @@ set t_ut=
 set noswapfile
 set nobackup
 set nowritebackup
+set relativenumber
 
 syntax on
 colorscheme Tomorrow-Night
