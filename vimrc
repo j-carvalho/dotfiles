@@ -11,12 +11,13 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'airblade/vim-gitgutter'
+Plugin 'mattn/emmet-vim'
+Plugin 'godlygeek/tabular'
 " language support
 Bundle 'moll/vim-node'
 Bundle 'pangloss/vim-javascript'
 Bundle 'groenewege/vim-less'
 Bundle 'mustache/vim-mustache-handlebars'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()            " required
@@ -39,6 +40,7 @@ set t_ut=
 set noswapfile
 set nobackup
 set nowritebackup
+set relativenumber
 
 syntax on
 colorscheme Tomorrow-Night
@@ -94,3 +96,6 @@ let g:ctrlp_user_command = "find %s -type f | egrep -v '/\.(git|hg|svn|sass-cach
 " Markdown
 let g:vim_markdown_folding_disabled=1
 
+" Emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
