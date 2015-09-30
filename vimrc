@@ -6,18 +6,18 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Bundle 'flazz/vim-colorschemes'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'airblade/vim-gitgutter'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
 Plugin 'godlygeek/tabular'
 " language support
-Bundle 'moll/vim-node'
-Bundle 'pangloss/vim-javascript'
-Bundle 'groenewege/vim-less'
-Bundle 'mustache/vim-mustache-handlebars'
+Plugin 'moll/vim-node'
+Plugin 'pangloss/vim-javascript'
+Plugin 'groenewege/vim-less'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()            " required
@@ -87,6 +87,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
 
 " Ctrlp
 let g:ctrlp_show_hidden = 1
