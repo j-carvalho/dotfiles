@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="josecarvalho"
+ZSH_THEME="juanghurtado"
 
 DISABLE_AUTO_UPDATE="true"
 

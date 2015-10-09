@@ -24,7 +24,6 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 set laststatus=2
-set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
@@ -41,6 +40,19 @@ set noswapfile
 set nobackup
 set nowritebackup
 set relativenumber
+
+" (Hopefully) removes the delay when hitting esc in insert mode
+set noesckeys
+set ttimeout
+set ttimeoutlen=1
+
+" Performance attempts
+let loaded_matchparen=1 " Don't load matchit.vim (paren/bracket matching)
+let html_no_rendering=1 " Don't render italic, bold, links in HTML
+
+" Hide srollbars in GUI
+set guioptions-=T
+set guioptions-=r
 
 syntax on
 colorscheme Tomorrow-Night
@@ -90,9 +102,8 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
 
 " Ctrlp
-let g:ctrlp_show_hidden = 1
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_user_command = "find %s -type f | egrep -v '/\.(git|hg|svn|sass-cache|bundle|DS_Store|tmp)|node_module|vendor|bower_components|solr|tmp/' | egrep -v '\.(png|exe|jpg|gif|svg)$'"
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 
 " Markdown
 let g:vim_markdown_folding_disabled=1
