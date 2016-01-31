@@ -19,6 +19,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'rdolgushin/gitignore.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
