@@ -6,7 +6,7 @@ DISABLE_AUTO_UPDATE="true"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(activator docker boot2docker git sublime syntax-highlighting brew brew-cask bower nvm go heroku colored-man colorize vundle gitignore redis-cli sbt svn node npm osx vagrant docker tmux weechat)
+plugins=(activator docker boot2docker git sublime syntax-highlighting brew brew-cask bower nvm go heroku colored-man colorize vundle gitignore redis-cli sbt svn node npm osx vagrant docker tmux weechat docker-machine docker-compose spring)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -25,5 +25,8 @@ export GOPATH="$HOME/projects/gocode"
 
 # User configuration
 export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$GOPATH/bin:$PATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home
+
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 source $HOME/.zsh/os
