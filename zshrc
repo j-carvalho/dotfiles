@@ -1,3 +1,7 @@
+# User configuration
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$GOPATH/bin:$PATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home
+
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="juanghurtado"
@@ -22,10 +26,6 @@ export TERM="xterm-256color"
 
 # GOLANG CONFIG
 export GOPATH="$HOME/projects/gocode"
-
-# User configuration
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$GOPATH/bin:$PATH"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
