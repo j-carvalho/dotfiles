@@ -1,16 +1,40 @@
 # User configuration
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$GOPATH/bin:$PATH"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home
+export PATH="/usr/local/opt/postgresql@9.6/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$GOPATH/bin:/Users/josecarvalho/.dotnet/tools:$PATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/
 
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="juanghurtado"
+ZSH_THEME="spaceship"
+SPACESHIP_BATTERY_SHOW=false
 
 DISABLE_AUTO_UPDATE="true"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(activator docker boot2docker git sublime syntax-highlighting brew brew-cask bower nvm go heroku colored-man colorize vundle gitignore redis-cli sbt svn node npm osx vagrant docker tmux weechat docker-machine docker-compose spring)
+plugins=(
+  docker
+  sublime
+  brew
+  bower
+  nvm
+  go
+  heroku
+  colorize
+  vundle
+  gitignore
+  redis-cli
+  node
+  npm
+  git
+  osx
+  vagrant
+  docker
+  tmux
+  docker-machine
+  docker-compose
+  yarn
+  spring
+  dotnet)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -25,8 +49,22 @@ source $HOME/.zsh/aliases
 export TERM="xterm-256color"
 
 # GOLANG CONFIG
-export GOPATH="$HOME/projects/gocode"
+export GOPATH="$HOME/go"
+export GOROOT="/usr/local/Cellar/go/1.11.4/libexec"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+
+export PATH=${PATH}:${ANDROID_SDK}/emulator
+
 source $HOME/.zsh/os
+
+export VOLTA_HOME="$HOME/.volta"
+[ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
+
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+eval "$(pyenv init -)"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
