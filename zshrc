@@ -1,6 +1,5 @@
 # User configuration
-export PATH="/usr/local/opt/postgresql@9.6/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$GOPATH/bin:/Users/josecarvalho/.dotnet/tools:$PATH"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$GOPATH/bin:/$HOME/.dotnet/tools:$PATH"
 
 export ZSH=$HOME/.oh-my-zsh
 
@@ -13,11 +12,10 @@ COMPLETION_WAITING_DOTS="true"
 
 plugins=(
   docker
-  sublime
   brew
   bower
   nvm
-  go
+  golang
   heroku
   colorize
   vundle

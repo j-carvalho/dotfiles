@@ -1,8 +1,15 @@
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 
+brew tap homebrew/cask-versions
+
+brew tap homebrew/cask-fonts
+
 brew install jq \
+    svn \
+    spaceship \
+    pyenv \
+    mackup \
     jenv \
-    applesimutils \
     macvim \
     kubectl \
     helm \
@@ -10,12 +17,12 @@ brew install jq \
     nvm \
     reattach-to-user-namespace \
     tmux \
-    watchman
+    watchman \ 
+    docker
 
 brew cask install \
     android-studio \
     azure-data-studio \
-    docker \
     firefox-developer-edition \
     font-dejavu \
     font-dejavu-sans-mono-for-powerline \
@@ -35,6 +42,7 @@ brew cask install \
     rectangle \
     virtualbox \
     visual-studio-code \
-    vlc
+    vlc \
+    intellij
 
 
