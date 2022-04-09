@@ -1,5 +1,3 @@
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
-
 brew tap homebrew/cask-versions
 
 brew tap homebrew/cask-fonts
@@ -17,10 +15,10 @@ brew install jq \
     nvm \
     reattach-to-user-namespace \
     tmux \
-    watchman \ 
+    watchman \
     docker
 
-brew cask install \
+brew install \
     android-studio \
     azure-data-studio \
     firefox-developer-edition \
@@ -40,9 +38,9 @@ brew cask install \
     postman \
     react-native-debugger \
     rectangle \
-    virtualbox \
     visual-studio-code \
     vlc \
-    intellij
+    intellij-idea
+
 
 
