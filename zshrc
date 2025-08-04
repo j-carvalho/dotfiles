@@ -1,3 +1,5 @@
+autoload -Uz compinit
+compinit
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -10,7 +12,7 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$GOPATH/
 
 export ZSH=$HOME/.oh-my-zsh
 
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
   
 SPACESHIP_BATTERY_SHOW=false
 
@@ -21,10 +23,8 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   docker
   brew
-  bower
   nvm
   golang
-  heroku
   colorize
   vundle
   gitignore
@@ -33,7 +33,6 @@ plugins=(
   npm
   git
   macos
-  vagrant
   docker
   tmux
   docker-machine
@@ -82,5 +81,17 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+eval "$(rbenv init -)"
+
+eval "$(direnv hook zsh)"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export PATH="$PATH:/Users/josecarvalho/.local/bin"
